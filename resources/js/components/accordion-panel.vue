@@ -1,7 +1,6 @@
 <template>
-
     <div class="card container">
-        <div class="card-header" id="heading">
+        <div class="card-header" :id="getHeadingID">
             <h5 class="mb-0">
                 <button class="btn btn-link group" data-toggle="collapse" :data-target="getCollaspe"
                     aria-expanded="true" :aria-controls="getCollaspeID">
@@ -16,9 +15,11 @@
 
             <div v-for="n in 4" :key="n" class="row">
                 <div class="col">
+                    <img class="card-img-top" :src="setRandomPath(8)" alt="Food image" style="width:100%" v-show="showImage">
                     <p><food-card/></p>
                 </div>
                 <div class="col">
+                    <img class="card-img-top" :src="setRandomPath(4)" alt="Food image" style="width:100%" v-show="showImage">
                     <p><food-card/></p>
                 </div>
             </div>
@@ -36,12 +37,23 @@ export default {
     props: ['MenuID', 'MenuValue'],    
     data() {
         return {
-            
+            image: true,
+            imgpath: "http://lorempixel.com/",
+            img: "",
         };
     },
     methods: {
+        // setters, I set data
+        setRandomPath: function(n){
+            this.img = this.imgpath + "40" + String(Math.floor(Math.random() * Math.floor(n))) +  "/20" + String(Math.floor(Math.random() * Math.floor(n))) + "/food";
+            return this.img;
+        }
+    },
+    created () {
+        this.setRandomPath(9);
     },
     computed: {
+        // getters, I format and return data
         getCollaspe: function(){
             return "#collapse" + this.MenuID
         },
@@ -50,8 +62,17 @@ export default {
         },
         getHeadingID: function(){
             return "heading" + this.MenuID
-        }        
+        }, 
+        showImage: function(){
+            if(this.MenuID=="Two")
+            {
+                return this.image;
+            } 
+            else 
+            {
+                return !this.image;
+            }
+        }
     }
-
 }
 </script>

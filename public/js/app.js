@@ -1828,14 +1828,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "accordionPanel",
   props: ['MenuID', 'MenuValue'],
   data: function data() {
-    return {};
+    return {
+      image: true,
+      imgpath: "http://lorempixel.com/",
+      img: ""
+    };
   },
-  methods: {},
+  methods: {
+    // setters, I set data
+    setRandomPath: function setRandomPath(n) {
+      this.img = this.imgpath + "40" + String(Math.floor(Math.random() * Math.floor(n))) + "/20" + String(Math.floor(Math.random() * Math.floor(n))) + "/food";
+      return this.img;
+    }
+  },
+  created: function created() {
+    this.setRandomPath(9);
+  },
   computed: {
+    // getters, I format and return data
     getCollaspe: function getCollaspe() {
       return "#collapse" + this.MenuID;
     },
@@ -1844,6 +1859,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     getHeadingID: function getHeadingID() {
       return "heading" + this.MenuID;
+    },
+    showImage: function showImage() {
+      if (this.MenuID == "Two") {
+        return this.image;
+      } else {
+        return !this.image;
+      }
     }
   }
 });
@@ -1951,13 +1973,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "food-card",
   data: function data() {
     return {
       info: null,
       title: null,
-      price: "$49.99"
+      price: ""
     };
   },
   methods: {
@@ -1966,6 +1989,7 @@ __webpack_require__.r(__webpack_exports__);
       console.log(this.info);
       this.title = this.getTitle;
       this.description = this.getDescription;
+      this.price = this.getPrice;
     }
   },
   mounted: function mounted() {
@@ -1982,6 +2006,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     getDescription: function getDescription() {
       return this.info.menu_items[0].description;
+    },
+    getPrice: function getPrice() {
+      return Math.round(Math.random() * 10000) / 100;
     }
   }
 });
@@ -37325,7 +37352,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card container" }, [
-    _c("div", { staticClass: "card-header", attrs: { id: "heading" } }, [
+    _c("div", { staticClass: "card-header", attrs: { id: _vm.getHeadingID } }, [
       _c("h5", { staticClass: "mb-0" }, [
         _c(
           "button",
@@ -37364,10 +37391,40 @@ var render = function() {
           _vm._l(4, function(n) {
             return _c("div", { key: n, staticClass: "row" }, [
               _c("div", { staticClass: "col" }, [
+                _c("img", {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.showImage,
+                      expression: "showImage"
+                    }
+                  ],
+                  staticClass: "card-img-top",
+                  staticStyle: { width: "100%" },
+                  attrs: { src: _vm.setRandomPath(8), alt: "Food image" }
+                }),
+                _vm._v(" "),
                 _c("p", [_c("food-card")], 1)
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col" }, [_c("p", [_c("food-card")], 1)])
+              _c("div", { staticClass: "col" }, [
+                _c("img", {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.showImage,
+                      expression: "showImage"
+                    }
+                  ],
+                  staticClass: "card-img-top",
+                  staticStyle: { width: "100%" },
+                  attrs: { src: _vm.setRandomPath(4), alt: "Food image" }
+                }),
+                _vm._v(" "),
+                _c("p", [_c("food-card")], 1)
+              ])
             ])
           }),
           0
@@ -37491,6 +37548,8 @@ var render = function() {
     "div",
     { staticClass: "card container" },
     [
+      _vm._t("dinnerImg"),
+      _vm._v(" "),
       _vm._t("specialHeader"),
       _c("br"),
       _vm._v(" "),

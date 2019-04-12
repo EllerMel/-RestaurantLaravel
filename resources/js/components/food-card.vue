@@ -1,5 +1,6 @@
 <template>
   <div class="card container">
+    <slot name="dinnerImg"></slot>
     <slot name="specialHeader"></slot><br>
     <h4 class="card-title">{{ title }}</h4>
     <p class="card-text">{{ description }}</p>
@@ -14,7 +15,7 @@ export default {
     return {
       info: null,
       title: null,
-      price: "$49.99"
+      price: ""
     };
   },
   methods: {
@@ -23,6 +24,7 @@ export default {
       console.log(this.info);
       this.title = this.getTitle;
       this.description = this.getDescription;
+      this.price = this.getPrice;
     }
   },
   mounted() {
@@ -33,15 +35,20 @@ export default {
         self.info = response.data;
         self.setData();
       });
+
+  
   },
   computed: {
     // getters, I format and return data
     getTitle: function(){
       return this.info.menu_items[0].description.replace(/\"/g, "").split(' ').slice(0,2).join(' ');
-    } ,
+    },
     getDescription: function(){
       return this.info.menu_items[0].description;
-    } ,   
+    },
+    getPrice: function(){
+      return Math.round(Math.random() * 10000) / 100;
+    }
   }
 };
 </script>
