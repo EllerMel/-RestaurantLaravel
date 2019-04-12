@@ -1829,6 +1829,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "accordionPanel",
   props: ['MenuID', 'MenuValue'],
@@ -1980,6 +1984,7 @@ __webpack_require__.r(__webpack_exports__);
     return {
       info: null,
       title: null,
+      description: null,
       price: ""
     };
   },
@@ -37361,7 +37366,7 @@ var render = function() {
             attrs: {
               "data-toggle": "collapse",
               "data-target": _vm.getCollaspe,
-              "aria-expanded": "true",
+              "aria-expanded": "false",
               "aria-controls": _vm.getCollaspeID
             }
           },
@@ -37391,39 +37396,43 @@ var render = function() {
           _vm._l(4, function(n) {
             return _c("div", { key: n, staticClass: "row" }, [
               _c("div", { staticClass: "col" }, [
-                _c("img", {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.showImage,
-                      expression: "showImage"
-                    }
-                  ],
-                  staticClass: "card-img-top",
-                  staticStyle: { width: "100%" },
-                  attrs: { src: _vm.setRandomPath(8), alt: "Food image" }
-                }),
-                _vm._v(" "),
-                _c("p", [_c("food-card")], 1)
+                _c("div", { staticClass: "card-body" }, [
+                  _c("img", {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.showImage,
+                        expression: "showImage"
+                      }
+                    ],
+                    staticClass: "card-img-top",
+                    staticStyle: { width: "100%" },
+                    attrs: { src: _vm.setRandomPath(8), alt: "Food image" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", [_c("food-card")], 1)
+                ])
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "col" }, [
-                _c("img", {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.showImage,
-                      expression: "showImage"
-                    }
-                  ],
-                  staticClass: "card-img-top",
-                  staticStyle: { width: "100%" },
-                  attrs: { src: _vm.setRandomPath(4), alt: "Food image" }
-                }),
-                _vm._v(" "),
-                _c("p", [_c("food-card")], 1)
+                _c("div", { staticClass: "card-body" }, [
+                  _c("img", {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.showImage,
+                        expression: "showImage"
+                      }
+                    ],
+                    staticClass: "card-img-top",
+                    staticStyle: { width: "100%" },
+                    attrs: { src: _vm.setRandomPath(4), alt: "Food image" }
+                  }),
+                  _vm._v(" "),
+                  _c("p", [_c("food-card")], 1)
+                ])
               ])
             ])
           }),

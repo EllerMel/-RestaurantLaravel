@@ -15,6 +15,7 @@ export default {
     return {
       info: null,
       title: null,
+      description: null,
       price: ""
     };
   },

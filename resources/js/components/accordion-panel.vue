@@ -3,7 +3,7 @@
         <div class="card-header" :id="getHeadingID">
             <h5 class="mb-0">
                 <button class="btn btn-link group" data-toggle="collapse" :data-target="getCollaspe"
-                    aria-expanded="true" :aria-controls="getCollaspeID">
+                    aria-expanded="false" :aria-controls="getCollaspeID">
                     {{MenuValue}}
                 </button>
             </h5>
@@ -13,20 +13,24 @@
         <!-- class="collapse show" defaults to the accordion being open-->
             <div class="card-body">
 
-            <div v-for="n in 4" :key="n" class="row">
-                <div class="col">
-                    <img class="card-img-top" :src="setRandomPath(8)" alt="Food image" style="width:100%" v-show="showImage">
-                    <p><food-card/></p>
+                <div v-for="n in 4" :key="n" class="row">
+                    <div class="col">
+                        <div class="card-body">
+                        <img class="card-img-top" :src="setRandomPath(8)" alt="Food image" style="width:100%" v-show="showImage">
+                        <p><food-card></food-card></p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-body">
+                        <img class="card-img-top" :src="setRandomPath(4)" alt="Food image" style="width:100%" v-show="showImage">
+                        <p><food-card></food-card></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <img class="card-img-top" :src="setRandomPath(4)" alt="Food image" style="width:100%" v-show="showImage">
-                    <p><food-card/></p>
-                </div>
-            </div>
-
 
             </div>
         </div>
+
     </div>
 </template>
 
