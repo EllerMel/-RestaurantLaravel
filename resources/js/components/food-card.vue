@@ -1,6 +1,6 @@
 <template>
   <div class="card container">
-    <h2>{{ specialH2 }}</h2><br>
+    <slot name="specialHeader"></slot><br>
     <h4 class="card-title">{{ title }}</h4>
     <p class="card-text">{{ description }}</p>
     <p class="card-text">{{ this.price }}</p>
@@ -9,12 +9,10 @@
 
 <script>
 export default {
-  name: "special-card",
-  props: ['specialH2'],
+  name: "food-card",
   data() {
     return {
       info: null,
-      specialH2: null,
       title: null,
       price: "$49.99"
     };

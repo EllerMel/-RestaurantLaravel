@@ -1933,10 +1933,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/special-card.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/special-card.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/food-card.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/food-card.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1952,12 +1952,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "special-card",
-  props: ['specialH2'],
+  name: "food-card",
   data: function data() {
     return {
       info: null,
-      specialH2: null,
       title: null,
       price: "$49.99"
     };
@@ -37366,12 +37364,10 @@ var render = function() {
           _vm._l(4, function(n) {
             return _c("div", { key: n, staticClass: "row" }, [
               _c("div", { staticClass: "col" }, [
-                _c("p", [_c("special-card")], 1)
+                _c("p", [_c("food-card")], 1)
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "col" }, [
-                _c("p", [_c("special-card")], 1)
-              ])
+              _c("div", { staticClass: "col" }, [_c("p", [_c("food-card")], 1)])
             ])
           }),
           0
@@ -37476,10 +37472,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/special-card.vue?vue&type=template&id=4bc2a56f&":
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/special-card.vue?vue&type=template&id=4bc2a56f& ***!
-  \***************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/food-card.vue?vue&type=template&id=67ba6de4&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/food-card.vue?vue&type=template&id=67ba6de4& ***!
+  \************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -37491,16 +37487,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "card container" }, [
-    _c("h2", [_vm._v(_vm._s(_vm.specialH2))]),
-    _c("br"),
-    _vm._v(" "),
-    _c("h4", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.title))]),
-    _vm._v(" "),
-    _c("p", { staticClass: "card-text" }, [_vm._v(_vm._s(_vm.description))]),
-    _vm._v(" "),
-    _c("p", { staticClass: "card-text" }, [_vm._v(_vm._s(this.price))])
-  ])
+  return _c(
+    "div",
+    { staticClass: "card container" },
+    [
+      _vm._t("specialHeader"),
+      _c("br"),
+      _vm._v(" "),
+      _c("h4", { staticClass: "card-title" }, [_vm._v(_vm._s(_vm.title))]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [_vm._v(_vm._s(_vm.description))]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [_vm._v(_vm._s(this.price))])
+    ],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -49671,7 +49672,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
-Vue.component('special-card', __webpack_require__(/*! ./components/special-card.vue */ "./resources/js/components/special-card.vue")["default"]);
+Vue.component('food-card', __webpack_require__(/*! ./components/food-card.vue */ "./resources/js/components/food-card.vue")["default"]);
 Vue.component('accordion', __webpack_require__(/*! ./components/accordion.vue */ "./resources/js/components/accordion.vue")["default"]);
 Vue.component('accordionPanel', __webpack_require__(/*! ./components/accordion-panel.vue */ "./resources/js/components/accordion-panel.vue")["default"]);
 Vue.component('dinner-card', __webpack_require__(/*! ./components/dinner-card.vue */ "./resources/js/components/dinner-card.vue")["default"]);
@@ -50021,17 +50022,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/special-card.vue":
-/*!**************************************************!*\
-  !*** ./resources/js/components/special-card.vue ***!
-  \**************************************************/
+/***/ "./resources/js/components/food-card.vue":
+/*!***********************************************!*\
+  !*** ./resources/js/components/food-card.vue ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _special_card_vue_vue_type_template_id_4bc2a56f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./special-card.vue?vue&type=template&id=4bc2a56f& */ "./resources/js/components/special-card.vue?vue&type=template&id=4bc2a56f&");
-/* harmony import */ var _special_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./special-card.vue?vue&type=script&lang=js& */ "./resources/js/components/special-card.vue?vue&type=script&lang=js&");
+/* harmony import */ var _food_card_vue_vue_type_template_id_67ba6de4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./food-card.vue?vue&type=template&id=67ba6de4& */ "./resources/js/components/food-card.vue?vue&type=template&id=67ba6de4&");
+/* harmony import */ var _food_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./food-card.vue?vue&type=script&lang=js& */ "./resources/js/components/food-card.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -50041,9 +50042,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _special_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _special_card_vue_vue_type_template_id_4bc2a56f___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _special_card_vue_vue_type_template_id_4bc2a56f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _food_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _food_card_vue_vue_type_template_id_67ba6de4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _food_card_vue_vue_type_template_id_67ba6de4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -50053,38 +50054,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/special-card.vue"
+component.options.__file = "resources/js/components/food-card.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/special-card.vue?vue&type=script&lang=js&":
-/*!***************************************************************************!*\
-  !*** ./resources/js/components/special-card.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************/
+/***/ "./resources/js/components/food-card.vue?vue&type=script&lang=js&":
+/*!************************************************************************!*\
+  !*** ./resources/js/components/food-card.vue?vue&type=script&lang=js& ***!
+  \************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_special_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./special-card.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/special-card.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_special_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_food_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./food-card.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/food-card.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_food_card_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/components/special-card.vue?vue&type=template&id=4bc2a56f&":
-/*!*********************************************************************************!*\
-  !*** ./resources/js/components/special-card.vue?vue&type=template&id=4bc2a56f& ***!
-  \*********************************************************************************/
+/***/ "./resources/js/components/food-card.vue?vue&type=template&id=67ba6de4&":
+/*!******************************************************************************!*\
+  !*** ./resources/js/components/food-card.vue?vue&type=template&id=67ba6de4& ***!
+  \******************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_special_card_vue_vue_type_template_id_4bc2a56f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./special-card.vue?vue&type=template&id=4bc2a56f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/special-card.vue?vue&type=template&id=4bc2a56f&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_special_card_vue_vue_type_template_id_4bc2a56f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_food_card_vue_vue_type_template_id_67ba6de4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./food-card.vue?vue&type=template&id=67ba6de4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/food-card.vue?vue&type=template&id=67ba6de4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_food_card_vue_vue_type_template_id_67ba6de4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_special_card_vue_vue_type_template_id_4bc2a56f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_food_card_vue_vue_type_template_id_67ba6de4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

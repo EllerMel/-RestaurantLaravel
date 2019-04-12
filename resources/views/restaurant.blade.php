@@ -22,7 +22,7 @@
                 <p class="centered">Sunday Brunch and Dinner</p>
                 <p class="centered">11am - 8pm</p>
             </div>
-            <special-card :specialH2="'Le plat du jour'"></special-card>
+            <food-card><h2 slot="specialHeader">Le plat du jour</h2></food-card>
         </div>
 
         <div class="rightcolumn">

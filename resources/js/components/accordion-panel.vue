@@ -16,10 +16,10 @@
 
             <div v-for="n in 4" :key="n" class="row">
                 <div class="col">
-                    <p><special-card/></p>
+                    <p><food-card/></p>
                 </div>
                 <div class="col">
-                    <p><special-card/></p>
+                    <p><food-card/></p>
                 </div>
             </div>
 
